@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run: |
           docker build -t biswasraja/react-test -f ./client/Dockerfile.dev ./client
-          docker run -e CI=true dbiswasraja/react-test npm test
+          docker run -e CI=true biswasraja/react-test npm test
           docker build -t biswasraja/multi-client ./client
           docker build -t biswasraja/multi-nginx ./nginx
           docker build -t biswasraja/multi-server ./server
