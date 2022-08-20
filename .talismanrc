@@ -1,0 +1,14 @@
+fileignoreconfig:
+- filename: .idea/checkstyle-idea.xml
+  checksum: c6ca8b37fe720aaf6e76d0aef9e9a9d304c2df23c0e7bf283830067e8916b21c
+- filename: server/keys.js
+  checksum: daa920e824ac9e7fc3bf934de6d02526d433d494c2f1afeaac3df92b1f3f349d
+- filename: server/index.js
+  checksum: 3fad0d4cd4e32d546427bfa91064932a3ea716ddadd2cd4f84338e1a08b3472e
+- filename: docker-compose.yml
+  checksum: 3b6f602869dd628216da5ffbdf9403f8faeb0faee7493890f10a22ced82aff52
+- filename: worker/index.js
+  checksum: c981233e2545cfa7e650593106538ce2a40c18b7866133a4874857d754345e75
+- filename: nginx/default.conf
+  checksum: 998e8c331dfc2e2a570cec048aa033553603d165ba75298e60d82b401c611195
+version: ""

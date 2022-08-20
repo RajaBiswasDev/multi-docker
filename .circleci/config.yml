@@ -8,5 +8,14 @@ jobs:
           version: 20.10.14
       - checkout
       - run: |
-          docker build -t docker-react -f Dockerfile.dev .
-          docker run -e CI=true docker-react npm run test
+          docker build -t biswasraja/react-test -f ./client/Dockerfile.dev ./client
+          docker run -e CI=true dbiswasraja/react-test npm test
+          docker build -t biswasraja/multi-client ./client
+          docker build -t biswasraja/multi-nginx ./nginx
+          docker build -t biswasraja/multi-server ./server
+          docker build -t biswasraja/multi-worker ./worker
+          echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+          docker push biswasraja/multi-client
+          docker push biswasraja/multi-nginx
+          docker push biswasraja/multi-server
+          docker push biswasraja/multi-worker
